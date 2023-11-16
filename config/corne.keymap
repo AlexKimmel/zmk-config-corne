@@ -50,9 +50,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &mb CARET EXCL &kp AT  &mb KP_MULTIPLY HASH  &mp AMPS DLLR  &kp PRCNT    &kp PLUS   &kp EQUAL   &kp MINUS  &kp FSLH &kp QMARK &kp BSPC
-&kp LEFT_SHIFT    &trans         &trans  &trans                &kp LBKT       &kp RBKT     &kp LT     &kp LPAR    &kp RPAR   &kp GT   &kp BSLH  &kp GRAVE
-&kp LEFT_CONTROL  &trans         &trans  &trans                &trans         &trans       &kp UNDER  &kp LBRC    &kp RBRC   &kp PIPE &trans    &kp TILDE
+&kp TAB           &mb CARET EXCL &kp AT  &mb STAR HASH         &mp AMPS DLLR  &kp PRCNT    &kp PLUS   &kp EQUAL   &kp MINUS  &kp FSLH  &kp QMARK  &kp BSPC
+&kp LEFT_SHIFT    &trans         &trans  &trans                &kp LBKT       &kp RBKT     &kp LT     &kp LPAR    &kp RPAR   &kp GT    &kp BSLH   &kp GRAVE
+&kp LEFT_CONTROL  &trans         &trans  &trans                &trans         &trans       &kp UNDER  &kp LBRC    &kp RBRC   &kp PIPE  &trans     &kp TILDE
                                     &kp LGUI                   &trans         &kp SPACE    &kp RET    &trans      &kp RALT
             >;
         };
