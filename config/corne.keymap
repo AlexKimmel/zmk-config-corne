@@ -26,10 +26,10 @@
 
         default_layer {
             bindings = <
-&kp TAB           &kp DE_Q               &kp DE_W  &kp DE_E   &kp DE_R  &kp DE_T        &kp DE_Z               &a_uml DE_U_UMLAUT DE_U     &kp DE_I               &a_uml DE_O_UMLAUT DE_O     &kp DE_P     &kp BSPC
-&kp LEFT_SHIFT    &a_uml DE_a_uml DE_A   &kp DE_S  &kp DE_D   &kp DE_F  &kp DE_G        &kp DE_H               &kp DE_J                    &kp DE_K               &kp DE_L                    &kp DE_SEMI  &kp DE_APOS
-&kp LEFT_CONTROL  &kp DE_Y               &kp DE_X  &kp DE_C   &kp DE_V  &kp DE_B        &kp DE_N               &kp DE_M                    &kp DE_COMMA           &kp DE_DOT                  &kp DE_MINUS &kp ESC
-                                                   &kp LGUI   &mo 1     &kp SPACE       &kp RET                &mo 2                       &kp RALT
+&kp TAB           &kp DE_Q                    &kp DE_W  &kp DE_E   &kp DE_R  &kp DE_T        &kp DE_Z               &a_uml DE_U_UMLAUT DE_U     &kp DE_I               &a_uml DE_O_UMLAUT DE_O     &kp DE_P     &kp BSPC
+&kp LEFT_SHIFT    &a_uml DE_A_UMLAUT DE_A     &kp DE_S  &kp DE_D   &kp DE_F  &kp DE_G        &kp DE_H               &kp DE_J                    &kp DE_K               &kp DE_L                    &kp DE_SEMI  &kp DE_APOS
+&kp LEFT_CONTROL  &kp DE_Y                    &kp DE_X  &kp DE_C   &kp DE_V  &kp DE_B        &kp DE_N               &kp DE_M                    &kp DE_COMMA           &kp DE_DOT                  &kp DE_MINUS &kp ESC
+                                                        &kp LGUI   &mo 1     &kp SPACE       &kp RET                &mo 2                       &kp RALT
             >;
         };
 
