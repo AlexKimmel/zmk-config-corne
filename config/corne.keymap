@@ -10,33 +10,44 @@
 #include <locale/keys_de.h>
 
 / {
+    behaviors {
+        a_uml: a_uml {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&mt ESC TAB       &kp DE_Q      &kp DE_W  &kp DE_E     &kp DE_R  &kp DE_T        &kp DE_Z    &mt LEFT_BRACKET LS(DE_U)  &kp DE_I      &mt SEMICOLON DE_O  &kp DE_P      &kp BSPC
-&kp LEFT_SHIFT    &mt SQT DE_A  &kp DE_S  &kp DE_D     &kp DE_F  &kp DE_G        &kp DE_H    &kp DE_J                   &kp DE_K      &kp DE_L            &kp LT        &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp DE_Y      &kp DE_X  &kp DE_C     &kp DE_V  &kp DE_B        &kp DE_N    &kp DE_M                   &kp DE_COMMA  &kp DE_DOT          &kp DE_MINUS  &kp ESC
-                                          &kp LGUI     &mo 1     &kp SPACE       &kp RET     &mo 2                      &kp RALT
+&kp TAB           &kp DE_Q               &kp DE_W  &kp DE_E   &kp DE_R  &kp DE_T        &kp DE_Z               &a_uml DE_U_UMLAUT DE_U     &kp DE_I               &a_uml DE_O_UMLAUT DE_O     &kp DE_P     &kp BSPC
+&kp LEFT_SHIFT    &a_uml DE_a_uml DE_A   &kp DE_S  &kp DE_D   &kp DE_F  &kp DE_G        &kp DE_H               &kp DE_J                    &kp DE_K               &kp DE_L                    &kp DE_SEMI  &kp DE_APOS
+&kp LEFT_CONTROL  &kp DE_Y               &kp DE_X  &kp DE_C   &kp DE_V  &kp DE_B        &kp DE_N               &kp DE_M                    &kp DE_COMMA           &kp DE_DOT                  &kp DE_MINUS &kp ESC
+                                                   &kp LGUI   &mo 1     &kp SPACE       &kp RET                &mo 2                       &kp RALT
             >;
         };
 
         number_layer {
             bindings = <
-&trans  &kp DE_EXCL  &kp DE_AT  &kp DE_HASH  &kp DE_DLLR  &kp DE_PRCNT    &kp DE_CARET   &kp DE_AMPS  &kp DE_ASTRK  &kt DE_GRAVE  &bt BT_PRV  &bt BT_NXT
-&trans  &kp DE_N1    &kp DE_N2  &kp DE_N3    &kp DE_N4    &kp DE_N5       &kp DE_N6      &kp DE_N7    &kp DE_N8     &kp DE_N9     &kp DE_N0   &trans
-&trans  &trans       &trans     &trans       &trans       &kp DE_LT       &kp LG(DE_GT)  &trans       &kp DE_COMMA  &kp DE_DOT    &trans      &trans
-                                &kp LGUI     &trans       &kp SPACE       &kp RET        &trans       &kp RALT
+&trans  &kp DE_N1   &kp DE_N2    &kp DE_N3    &kp DE_N4    &kp DE_N5       &kp DE_N6      &kp DE_N7    &kp DE_N8     &kp DE_N9     &kp DE_N0   &trans
+&trans  &kp DE_LT   &kp DE_LBRC  &kp DE_LPAR  &kp DE_LBKT  &kp DE_FSLH     &kp DE_BSLH    &kp DE_RBKT  &kp DE_RPAR   &kp DE_RBRC   &kp DE_GT   &trans
+&trans  &trans      &trans       &trans       &trans       &trans          &trans         &trans       &tans         &trans        &trans      &trans
+                                 &kp LGUI     &trans       &kp SPACE       &kp RET        &trans       &kp RALT
             >;
         };
 
         code_layer {
             bindings = <
-&trans  &kp DE_UNDER  &kp DE_MINUS  &kp DE_PLUS  &kp DE_EQUAL  &kp DE_COLON    &kp DE_GRAVE  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp DEL      &trans
-&trans  &kp DE_LBRC   &kp DE_LPAR   &kp DE_RPAR  &kp DE_RBRC   &kp DE_PIPE     &kp LEFT      &kp UP        &kp DOWN    &kp RIGHT     &trans       &trans
-&trans  &kp DE_LBKT   &kp DE_APOS   &kp DE_DQT   &kp DE_RBKT   &kp DE_SEMI     &kp DE_TILDE  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp DE_BSLH  &trans
-                                    &kp LGUI     &trans        &kp SPACE       &kp RET       &trans        &kp RALT
+&trans  &kp DE_EXCL   &kp DE_AT     &kp DE_HASH   &kp DE_DLLR   &kp DE_PRCNT    &kp DE_CARET   &kp DE_AMPS   &kp DE_ASTRK  &kp DE_EQUAL  &kp DE_PLUS   &kp DEL
+&trans  &kp DE_GRAVE  &kp DE_TILDE  &kp DE_UNDER  &kp DE_MINUS  &kp DE_PIPE     &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &kp DE_COLON  &kp DE_SEMI
+&trans  &kp DE_BSLH   &kp DE_FSLH   &kp DE_APOS   &kp DE_DQT    &kp DE_QMARK    &kp HOME       &kp PG_DN     &kp PG_UP     &kp END       &kp DE_DOT    &trans
+                                    &kp LGUI      &trans        &kp SPACE       &kp RET        &trans        &kp RALT
             >;
         };
     };
